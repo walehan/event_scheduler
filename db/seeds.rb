@@ -18,3 +18,8 @@ EventSubtype.create([ { event_type_id: sport_event.id, event_subtype: 'basketbal
 
 EventLocation.create([ { event_location: 'Orleans and Division Basketball Park', display_name: 'Orleans and Division Basketball Park' } ])
             
+
+CommunicationMethod.create([ {communication_method: 'email'},
+                             {communication_method: 'phone_text'},
+                             {communication_method: 'push'},
+                             [communication_method: 'default'} ])

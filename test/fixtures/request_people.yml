@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  request_person_id: 1
+  request_id: 1
+  communication_method_id: 1
+
+two:
+  request_person_id: 1
+  request_id: 1
+  communication_method_id: 1

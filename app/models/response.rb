@@ -1,6 +1,8 @@
 class Response < ActiveRecord::Base
   belongs_to :person
-  belongs_to :request
+
+  belongs_to :request_person
+  has_one :request, :through => :request_person
 
   has_many :response_timeslots
   has_many :response_event_subtypes

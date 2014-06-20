@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140620034353) do
+ActiveRecord::Schema.define(version: 20140620092419) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "communication_methods", force: true do |t|
+    t.string   "communication_method"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "event_locations", force: true do |t|
     t.text     "event_location"
@@ -47,6 +53,15 @@ ActiveRecord::Schema.define(version: 20140620034353) do
     t.datetime "updated_at"
   end
 
+  create_table "request_people", force: true do |t|
+    t.integer  "person_id"
+    t.integer  "request_id"
+    t.integer  "communication_method_id"
+    t.integer  "response_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "request_types", force: true do |t|
     t.string   "request_type"
     t.string   "display_name"
@@ -56,7 +71,6 @@ ActiveRecord::Schema.define(version: 20140620034353) do
 
   create_table "requests", force: true do |t|
     t.integer  "creator_person_id"
-    t.integer  "owner_person_id"
     t.integer  "request_type_id"
     t.integer  "event_type_id"
     t.string   "event_name"
@@ -91,7 +105,7 @@ ActiveRecord::Schema.define(version: 20140620034353) do
 
   create_table "responses", force: true do |t|
     t.integer  "person_id"
-    t.integer  "request_id"
+    t.integer  "request_person_id"
     t.integer  "min_people"
     t.integer  "max_people"
     t.integer  "min_duration"
