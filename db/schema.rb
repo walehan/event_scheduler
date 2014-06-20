@@ -62,18 +62,18 @@ ActiveRecord::Schema.define(version: 20140620092419) do
     t.datetime "updated_at"
   end
 
-  create_table "person_requests", force: true do |t|
-    t.integer  "person_id"
-    t.integer  "event_poll_id"
-    t.integer  "communication_method_id"
-    t.integer  "response_id"
+  create_table "request_types", force: true do |t|
+    t.string   "request_type"
+    t.string   "display_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "request_types", force: true do |t|
-    t.string   "request_type"
-    t.string   "display_name"
+  create_table "requests", force: true do |t|
+    t.integer  "person_id"
+    t.integer  "event_poll_id"
+    t.integer  "communication_method_id"
+    t.integer  "response_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -104,7 +104,7 @@ ActiveRecord::Schema.define(version: 20140620092419) do
 
   create_table "responses", force: true do |t|
     t.integer  "person_id"
-    t.integer  "person_request_id"
+    t.integer  "request_id"
     t.integer  "min_people"
     t.integer  "max_people"
     t.integer  "min_duration"

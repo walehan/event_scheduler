@@ -1,8 +1,8 @@
 class Response < ActiveRecord::Base
   belongs_to :person
 
-  belongs_to :person_request
-  has_one :event_poll, :through => :person_request
+  belongs_to :request
+  has_one :event_poll, :through => :request
 
   has_many :response_timeslots
   has_many :response_event_subtypes

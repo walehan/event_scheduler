@@ -1,3 +1,3 @@
 class CommunicationMethod < ActiveRecord::Base
-  has_many :person_requests
+  has_many :requests
 end

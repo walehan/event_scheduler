@@ -1,6 +1,6 @@
-class CreatePersonRequest < ActiveRecord::Migration
+class CreateRequest < ActiveRecord::Migration
   def change
-    create_table :person_requests do |t|
+    create_table :requests do |t|
       t.integer :person_id
       t.integer :event_poll_id
       t.integer :communication_method_id
