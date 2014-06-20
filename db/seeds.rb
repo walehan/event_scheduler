@@ -22,4 +22,4 @@ EventLocation.create([ { event_location: 'Orleans and Division Basketball Park',
 CommunicationMethod.create([ {communication_method: 'email'},
                              {communication_method: 'phone_text'},
                              {communication_method: 'push'},
-                             [communication_method: 'default'} ])
+                             {communication_method: 'default'} ])

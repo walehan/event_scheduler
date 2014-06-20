@@ -2,7 +2,7 @@ class Response < ActiveRecord::Base
   belongs_to :person
 
   belongs_to :person_request
-  has_one :request, :through => :person_request
+  has_one :event_poll, :through => :person_request
 
   has_many :response_timeslots
   has_many :response_event_subtypes

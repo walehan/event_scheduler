@@ -1,7 +1,7 @@
 class PersonRequest < ActiveRecord::Base
   belongs_to :person
   belongs_to :communication_method
-  belongs_to :request
+  belongs_to :event_poll
 
   has_one :response
 
