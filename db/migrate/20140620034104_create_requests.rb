@@ -5,7 +5,6 @@ class CreateRequests < ActiveRecord::Migration
       t.integer :request_type_id
       t.integer :event_type_id
       t.string :event_name
-      t.integer :creator_response_id
 
       t.timestamps
     end

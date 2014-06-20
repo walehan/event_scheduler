@@ -7,7 +7,7 @@ class PersonRequest < ActiveRecord::Base
 
   # respond with global vars to a request with all information. Agg information is in array
   def respond(min_people, max_people, min_duration, max_duration, subtype_flex_rating, subtype_id_array)
-    if self.response is nil
+    if self.response == nil
         r = Response.new
         self.response = r
     else

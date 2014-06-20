@@ -2,7 +2,7 @@ class CreateResponses < ActiveRecord::Migration
   def change
     create_table :responses do |t|
       t.integer :person_id
-      t.integer :request_person_id
+      t.integer :person_request_id
       t.integer :min_people
       t.integer :max_people
       t.integer :min_duration

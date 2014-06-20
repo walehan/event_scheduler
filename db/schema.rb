@@ -74,7 +74,6 @@ ActiveRecord::Schema.define(version: 20140620092419) do
     t.integer  "request_type_id"
     t.integer  "event_type_id"
     t.string   "event_name"
-    t.integer  "creator_response_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -105,7 +104,7 @@ ActiveRecord::Schema.define(version: 20140620092419) do
 
   create_table "responses", force: true do |t|
     t.integer  "person_id"
-    t.integer  "request_person_id"
+    t.integer  "person_request_id"
     t.integer  "min_people"
     t.integer  "max_people"
     t.integer  "min_duration"
