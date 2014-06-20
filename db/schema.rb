@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 20140620092419) do
     t.datetime "updated_at"
   end
 
-  create_table "request_people", force: true do |t|
+  create_table "person_requests", force: true do |t|
     t.integer  "person_id"
     t.integer  "request_id"
     t.integer  "communication_method_id"
