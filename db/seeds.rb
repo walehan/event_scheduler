@@ -7,9 +7,9 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-RequestType.create([ { request_type: 'democracy', display_name: 'Democracy' },
-                     { request_type: 'republic', display_name: 'Republic' },
-                     { request_type: 'tyranny', display_name: 'My Way or the Highway' }])
+EventPollType.create([ { event_poll_type: 'democracy', display_name: 'Democracy' },
+                     { event_poll_type: 'republic', display_name: 'Republic' },
+                     { event_poll_type: 'tyranny', display_name: 'My Way or the Highway' }])
 
 sport_event = EventType.create( event_type: 'sports', display_name: 'Play Sports' )
 

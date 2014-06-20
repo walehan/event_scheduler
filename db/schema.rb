@@ -29,9 +29,16 @@ ActiveRecord::Schema.define(version: 20140620092419) do
     t.datetime "updated_at"
   end
 
+  create_table "event_poll_types", force: true do |t|
+    t.string   "event_poll_type"
+    t.string   "display_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "event_polls", force: true do |t|
     t.integer  "creator_person_id"
-    t.integer  "request_type_id"
+    t.integer  "event_poll_type_id"
     t.integer  "event_type_id"
     t.string   "event_name"
     t.datetime "created_at"
@@ -58,13 +65,6 @@ ActiveRecord::Schema.define(version: 20140620092419) do
     t.string   "lastname"
     t.string   "phone"
     t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "request_types", force: true do |t|
-    t.string   "request_type"
-    t.string   "display_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -3,8 +3,8 @@ class Person < ActiveRecord::Base
   has_many :responses
   has_many :requests
 
-  def create_event_poll(event_name, request_type_id, event_type_id)
-    my_poll = EventPoll.new :event_name => event_name, :request_type_id => request_type_id, :event_type_id => event_type_id
+  def create_event_poll(event_name, event_poll_type_id, event_type_id)
+    my_poll = EventPoll.new :event_name => event_name, :event_poll_type_id => event_poll_type_id, :event_type_id => event_type_id
     my_poll.add_person_request(self, CommunicationMethod.where(:communication_method => 'default')) 
     my_poll.creator_person = self
     my_poll.save
