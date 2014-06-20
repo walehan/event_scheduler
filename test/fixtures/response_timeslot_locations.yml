@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  response_timeslot_id: 1
+  event_location_id: 1
+  preference: 1
+
+two:
+  response_timeslot_id: 1
+  event_location_id: 1
+  preference: 1

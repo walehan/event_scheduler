@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  response_id: 1
+  start_time: 2014-06-19 22:43:08
+  end_time: 2014-06-19 22:43:08
+  location_flexibility_rating: 1
+
+two:
+  response_id: 1
+  start_time: 2014-06-19 22:43:08
+  end_time: 2014-06-19 22:43:08
+  location_flexibility_rating: 1

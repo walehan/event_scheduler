@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  creator_person_id: 1
+  owner_person_id: 1
+  request_type_id: 1
+  event_type_id: 1
+  event_name: MyString
+  creator_response_id: 1
+
+two:
+  creator_person_id: 1
+  owner_person_id: 1
+  request_type_id: 1
+  event_type_id: 1
+  event_name: MyString
+  creator_response_id: 1
